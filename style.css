@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #c1f0b0, #67c888);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    background-color: #3ba56b;
+    padding: 20px 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 320px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.logo img {
+    max-width: 60px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #e6fffa;
+}
+
+.form-container {
+    position: relative;
+    margin-top: 15px;
+    overflow: hidden;
+    height: auto;
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.form.active {
+    display: flex;
+    opacity: 1;
+}
+
+form h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #e6fffa;
+}
+
+input {
+    width: 100%;
+    max-width: 250px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #e0f6da;
+    color: #2d3748;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder {
+    color: #718096;
+}
+
+button {
+    width: 100%;
+    max-width: 250px;
+    padding: 8px;
+    background-color: #79d4a1;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #2f855a;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+button:hover {
+    background-color: #5bc086;
+    transform: scale(1.05);
+}
+
+a {
+    color: #a4f0d5;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 12px;
+    margin: 0;
+}
