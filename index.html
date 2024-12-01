@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compact Login/Signup Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login/Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -13,23 +13,39 @@
         </div>
         <h1>Welcome</h1>
         <div class="form-container">
+            <!-- Login Form -->
             <form id="loginForm" class="form active">
                 <h2>Login</h2>
                 <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
+                <div class="password-container">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <span class="toggle-password" data-target="loginPassword">
+                        <i class="icon-eye"></i>
+                    </span>
+                </div>
+                <label class="remember-me">
+                    <input type="checkbox" name="remember"> Remember Me
+                </label>
                 <button type="submit">Login</button>
                 <p>Don't have an account? <a href="#" id="toggleForm">Sign Up</a></p>
             </form>
+            <!-- Signup Form -->
             <form id="signupForm" class="form">
                 <h2>Sign Up</h2>
                 <input type="text" placeholder="Full Name" required>
                 <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
+                <div class="password-container">
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <span class="toggle-password" data-target="signupPassword">
+                        <i class="icon-eye"></i>
+                    </span>
+                </div>
                 <button type="submit">Sign Up</button>
                 <p>Already have an account? <a href="#" id="toggleBack">Login</a></p>
             </form>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
