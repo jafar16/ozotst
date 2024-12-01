@@ -14,31 +14,19 @@ body {
     text-align: center;
     background-color: #3ba56b;
     padding: 20px 15px;
-    border-radius: 8px;
+    border-radius: 20px; /* Soft corners */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 320px;
     animation: fadeIn 0.8s ease-out;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 .logo img {
     max-width: 60px;
     margin-bottom: 15px;
-    border-radius: 15px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 20px; /* Rounded edges for the logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 
 h1 {
     margin: 10px 0;
@@ -47,54 +35,84 @@ h1 {
 }
 
 .form-container {
-    position: relative;
     margin-top: 15px;
-    overflow: hidden;
-    height: auto;
 }
 
 .form {
     display: none;
     flex-direction: column;
+    gap: 15px; /* Uniform spacing */
     align-items: center;
-    gap: 10px;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .form.active {
     display: flex;
-    opacity: 1;
-}
-
-form h2 {
-    margin-bottom: 5px;
-    font-size: 18px;
-    color: #e6fffa;
 }
 
 input {
     width: 100%;
     max-width: 250px;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Soft corners */
     font-size: 14px;
-    background-color: #e0f6da;
-    color: #2d3748;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
-input::placeholder {
-    color: #718096;
+input:focus {
+    border-color: #79d4a1;
+    outline: none;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+}
+
+.password-container input {
+    padding-right: 40px; /* Space for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #5bc086;
+}
+
+.toggle-password i {
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover i {
+    color: #2d3748;
+}
+
+.remember-me {
+    font-size: 12px;
+    color: #e6fffa;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-me input {
+    margin: 0;
+    accent-color: #79d4a1; /* Styling the checkbox */
 }
 
 button {
     width: 100%;
     max-width: 250px;
-    padding: 8px;
+    padding: 10px;
     background-color: #79d4a1;
     border: none;
-    border-radius: 4px;
+    border-radius: 15px; /* Rounded button */
     font-size: 16px;
     color: #2f855a;
     cursor: pointer;
@@ -106,17 +124,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-a {
-    color: #a4f0d5;
-    text-decoration: none;
-    font-size: 12px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-p {
-    font-size: 12px;
-    margin: 0;
+button:active {
+    transform: scale(1);
 }
